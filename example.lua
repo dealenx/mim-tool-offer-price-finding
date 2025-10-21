@@ -2,4 +2,4 @@
 -- Square plugin demonstration
 
 -- Load the plugin
-local plugin = require("tool")
+local plugin = require("mim")

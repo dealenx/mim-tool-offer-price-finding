@@ -1,11 +1,11 @@
-local tool = {}
+local mim = {}
 
-tool.guid = "f47ac10b-58cc-4372-a567-0e02b2c3d479"
-tool.name = "Проверка и поиск цен у товаров в интернете"
-tool.description =
+mim.guid = "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+mim.name = "Проверка и поиск цен у товаров в интернете"
+mim.description =
 "Инструмент для проверки цен товаров с множественными источниками. Столбцы A-G содержат исходную информацию о товарах (read-only), столбцы H-Q предназначены для записи результатов проверки цен (read-write)."
 
-tool.columns = {
+mim.columns = {
     A = {
         label = "Наименование товара",
         description = "Полное наименование товара (read-only)",
@@ -127,7 +127,7 @@ tool.columns = {
     }
 }
 
-tool.prompt = [[
+mim.prompt = [[
 # Автоматизированный поиск цен на маркетплейсах
 
 <role>
@@ -145,7 +145,7 @@ tool.prompt = [[
 
 </mcp_servers>
 
-<tools>
+<mims>
 <micmicai-mcp>
 -update_entry_fields(id, fields) - сохранить найденную цену в поле товара
 </micmicai-mcp>
@@ -157,7 +157,7 @@ tool.prompt = [[
 - browser_click(element, ref) - кликнуть по элементу
 - browser_wait_for(text/time) - ждать загрузки контента
 </playwright>
-</tools>
+</mims>
 
 <workflow>
 
@@ -355,4 +355,4 @@ tool.prompt = [[
 </expected_result>
 ]]
 
-return tool
+return mim
